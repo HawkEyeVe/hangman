@@ -32,8 +32,8 @@ public class Main {
             }
             wrongGuess.getPrintGuess(guess);
             System.out.println(wordState);
-            for (int i = 0; i < wordState.size(); i++) {
-                if (wordState.get(i) != '_') {
+            for (Character character : wordState) {
+                if (character != '_') {
                     winCounter++;
                     if (winCounter == word.length()) {
                         System.out.println("You win!");
@@ -47,7 +47,6 @@ public class Main {
                 break;
             }
         }
-
-
+        sc.close();
     }
 }
