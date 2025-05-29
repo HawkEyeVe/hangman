@@ -15,7 +15,7 @@ public class Main {
         System.out.println("* Welcome to Hangman! *");
         System.out.println("***********************");
         WrongGuess wrongGuess = new WrongGuess();
-        while (guess <= word.length()) {
+        while (true) {
             int winCounter = 0;
             boolean isLetter = false;
             //wrongGuess.getPrintGuess(guess);
@@ -42,7 +42,7 @@ public class Main {
                 }
             }
 
-            if (guess == word.length()) {
+            if (guess == word.length() + 1) {
                 System.out.println("You lose!");
                 break;
             }
